@@ -178,3 +178,9 @@ October rebuild evidence and reports: `artifacts/october-stories/`. The earlier 
 - Historical extraction is a one-time backfill, not a recurring full-archive scan. Completed work is retained. Overlapping month/archive requests share saved outcomes for unchanged articles, including partial or unavailable results; use **Extract again** for an intentional retry.
 - Automatic current-month processing continues for new/changed feed items with existing retry backoff. Completing or revisiting a historical job does not start a fresh pass over the archive. Chrome remains a separate explicit transport.
 - The job table shows **Reused results** (saved bodies or recorded attempts), and identifies pending work waiting for host cooldowns. Consolidated duplicate job records remain in the database for audit but are omitted from the active job table.
+
+## License
+
+News Jockey is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+
+Third-party dependencies, model weights, and publisher content retain their own licenses and terms.
