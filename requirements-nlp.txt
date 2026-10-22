@@ -1,0 +1,4 @@
+# Isolated Python 3.12 environment; free local inference only.
+gliner2[local]==2.0.0
+numpy==2.5.3
+requests==2.34.2

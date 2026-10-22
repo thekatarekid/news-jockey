@@ -1,0 +1,352 @@
+{
+  "version": "controlled-events-v1",
+  "note": "Authored synthetic fixtures, not publisher articles. Small regression/evaluation seed; not a production quality estimate. Labels fixed before first run. Held-out dates are later event dates, with delayed coverage included.",
+  "items": [
+    {
+      "id": "g1",
+      "title": "Google unveils privacy software for artificial intelligence",
+      "content": "Google unveiled privacy software for artificial intelligence in California on October 6, 2026. The new software lets users control information retained by the service.",
+      "story": "google_launch",
+      "topic": "google_ai_privacy",
+      "categories": [
+        "Technology"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Google unveiled privacy software for artificial intelligence in California on October 6, 2026. The new software lets users control information retained by the service.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "g2",
+      "title": "Google unveils privacy software for artificial intelligence",
+      "content": "Google unveiled privacy software for artificial intelligence in California on October 6, 2026. The company announced new information retention controls.",
+      "story": "google_launch",
+      "topic": "google_ai_privacy",
+      "categories": [
+        "Technology"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Google unveiled privacy software for artificial intelligence in California on October 6, 2026. The company announced new information retention controls.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "g3",
+      "title": "New Google AI tools give users control over stored data",
+      "content": "Google released privacy software in California on October 6, 2026. Users can delete information retained by its artificial intelligence service.",
+      "story": "google_launch",
+      "topic": "google_ai_privacy",
+      "categories": [
+        "Technology"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Google released privacy software in California on October 6, 2026. Users can delete information retained by its artificial intelligence service.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "g4",
+      "title": "Google privacy software faces investigation",
+      "content": "California opened an investigation into Google privacy software on October 7, 2026. Officials are investigating whether the artificial intelligence service retained deleted user data.",
+      "story": "google_investigation",
+      "topic": "google_ai_privacy",
+      "categories": [
+        "Technology",
+        "Crime & Justice"
+      ],
+      "published_at": "2026-10-07T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "California opened an investigation into Google privacy software on October 7, 2026. Officials are investigating whether the artificial intelligence service retained deleted user data.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "g5",
+      "title": "Google unveils a new computer chip",
+      "content": "Google unveiled a computer chip in California on October 6, 2026. The chip is designed for data center servers.",
+      "story": "google_chip",
+      "topic": "google_chips",
+      "categories": [
+        "Technology"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Google unveiled a computer chip in California on October 6, 2026. The chip is designed for data center servers.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "a1",
+      "title": "Apple announces Q1 earnings and revenue",
+      "content": "Apple announced Q1 earnings on October 6, 2026. Revenue increased as investors purchased shares and the stock price rose.",
+      "story": "apple_q1",
+      "topic": "apple_financial_performance",
+      "categories": [
+        "Technology",
+        "Business & Economy",
+        "Finance & Markets"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Apple announced Q1 earnings on October 6, 2026. Revenue increased as investors purchased shares and the stock price rose.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "a2",
+      "title": "Apple announces Q1 earnings and revenue",
+      "content": "Apple announced Q1 earnings on October 6, 2026. Revenue rose, boosting shares and investor interest in the stock.",
+      "story": "apple_q1",
+      "topic": "apple_financial_performance",
+      "categories": [
+        "Technology",
+        "Business & Economy",
+        "Finance & Markets"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Apple announced Q1 earnings on October 6, 2026. Revenue rose, boosting shares and investor interest in the stock.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "a3",
+      "title": "Apple announces Q2 earnings and revenue",
+      "content": "Apple announced Q2 earnings on October 7, 2026. Revenue fell, and investors sold shares as the stock price declined.",
+      "story": "apple_q2",
+      "topic": "apple_financial_performance",
+      "categories": [
+        "Technology",
+        "Business & Economy",
+        "Finance & Markets"
+      ],
+      "published_at": "2026-10-07T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Apple announced Q2 earnings on October 7, 2026. Revenue fell, and investors sold shares as the stock price declined.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "c1",
+      "title": "Supreme Court rules on California emissions lawsuit",
+      "content": "The Supreme Court ruled on a California emissions lawsuit on October 6, 2026. The ruling upheld limits on carbon emissions and pollution.",
+      "story": "court_ruling",
+      "topic": "california_emissions_case",
+      "categories": [
+        "Crime & Justice",
+        "Climate & Environment"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "The Supreme Court ruled on a California emissions lawsuit on October 6, 2026. The ruling upheld limits on carbon emissions and pollution.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "c2",
+      "title": "Supreme Court rules on California emissions lawsuit",
+      "content": "The Supreme Court ruled on a California emissions lawsuit on October 6, 2026. The judges upheld rules to reduce carbon emissions and pollution.",
+      "story": "court_ruling",
+      "topic": "california_emissions_case",
+      "categories": [
+        "Crime & Justice",
+        "Climate & Environment"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "The Supreme Court ruled on a California emissions lawsuit on October 6, 2026. The judges upheld rules to reduce carbon emissions and pollution.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "c3",
+      "title": "California emissions lawsuit ruling draws appeal",
+      "content": "A company filed an appeal in the California carbon emissions lawsuit on October 7, 2026. The court received the appeal challenging pollution limits.",
+      "story": "court_appeal",
+      "topic": "california_emissions_case",
+      "categories": [
+        "Crime & Justice",
+        "Climate & Environment"
+      ],
+      "published_at": "2026-10-07T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "A company filed an appeal in the California carbon emissions lawsuit on October 7, 2026. The court received the appeal challenging pollution limits.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "s1",
+      "title": "Boston wins Game 1 in NBA playoffs",
+      "content": "Boston won Game 1 in the NBA basketball playoffs on October 6, 2026. The team defeated Chicago 100-90.",
+      "story": "game1",
+      "topic": "boston_chicago_series",
+      "categories": [
+        "Sports"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Boston won Game 1 in the NBA basketball playoffs on October 6, 2026. The team defeated Chicago 100-90.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "s2",
+      "title": "Boston wins Game 1 in NBA playoffs",
+      "content": "Boston won Game 1 in the NBA basketball playoffs on October 6, 2026. Chicago lost 100-90 in the series opener.",
+      "story": "game1",
+      "topic": "boston_chicago_series",
+      "categories": [
+        "Sports"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Boston won Game 1 in the NBA basketball playoffs on October 6, 2026. Chicago lost 100-90 in the series opener.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "s3",
+      "title": "Boston wins Game 2 in NBA playoffs",
+      "content": "Boston won Game 2 in the NBA basketball playoffs on October 7, 2026. Chicago lost 101-91.",
+      "story": "game2",
+      "topic": "boston_chicago_series",
+      "categories": [
+        "Sports"
+      ],
+      "published_at": "2026-10-07T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Boston won Game 2 in the NBA basketball playoffs on October 7, 2026. Chicago lost 101-91.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "n1",
+      "title": "NASA launches telescope to study distant planets",
+      "content": "NASA launched a telescope on October 6, 2026. Scientists will use the spacecraft to study planets and astronomy.",
+      "story": "nasa_launch",
+      "topic": "nasa_telescope_mission",
+      "categories": [
+        "Science"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "NASA launched a telescope on October 6, 2026. Scientists will use the spacecraft to study planets and astronomy.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "n2",
+      "title": "NASA launches telescope to study distant planets",
+      "content": "NASA launched a telescope on October 6, 2026. The spacecraft is now in orbit, where scientists will use it to study distant planets.",
+      "story": "nasa_launch",
+      "topic": "nasa_telescope_mission",
+      "categories": [
+        "Science"
+      ],
+      "published_at": "2026-10-15T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "NASA launched a telescope on October 6, 2026. The spacecraft is now in orbit, where scientists will use it to study distant planets.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "n3",
+      "title": "NASA telescope discovers distant planet",
+      "content": "NASA scientists announced the discovery of a planet on October 7, 2026. The telescope made the discovery after the spacecraft began observations.",
+      "story": "nasa_discovery",
+      "topic": "nasa_telescope_mission",
+      "categories": [
+        "Science"
+      ],
+      "published_at": "2026-10-07T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "NASA scientists announced the discovery of a planet on October 7, 2026. The telescope made the discovery after the spacecraft began observations.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "h1",
+      "title": "FDA approves new cancer medicine",
+      "content": "The FDA approved a cancer medicine on October 6, 2026. Doctors said the medical treatment could help patients with advanced disease.",
+      "story": "fda_approval",
+      "topic": "cancer_medicine",
+      "categories": [
+        "Health"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "The FDA approved a cancer medicine on October 6, 2026. Doctors said the medical treatment could help patients with advanced disease.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "h2",
+      "title": "Cancer treatment cleared by FDA for patients",
+      "content": "The FDA approved a new cancer medicine on October 6, 2026. Patients with advanced disease are eligible for the medical treatment.",
+      "story": "fda_approval",
+      "topic": "cancer_medicine",
+      "categories": [
+        "Health"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "The FDA approved a new cancer medicine on October 6, 2026. Patients with advanced disease are eligible for the medical treatment.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "m1",
+      "title": "Netflix unveils new movie",
+      "content": "Netflix unveiled a movie on October 6, 2026. The film stars Hollywood actors and will debut on television.",
+      "story": "netflix_film",
+      "topic": "netflix_film_release",
+      "categories": [
+        "Entertainment & Culture"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Netflix unveiled a movie on October 6, 2026. The film stars Hollywood actors and will debut on television.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    },
+    {
+      "id": "m2",
+      "title": "Netflix unveils new movie",
+      "content": "Netflix unveiled a movie on October 6, 2026. Hollywood actors appeared at the film presentation.",
+      "story": "netflix_film",
+      "topic": "netflix_film_release",
+      "categories": [
+        "Entertainment & Culture"
+      ],
+      "published_at": "2026-10-06T12:00:00+00:00",
+      "body_quality": "full",
+      "feed_content": "Netflix unveiled a movie on October 6, 2026. Hollywood actors appeared at the film presentation.",
+      "content_type": "reporting",
+      "content_type_basis": "publisher",
+      "transcript": ""
+    }
+  ]
+}

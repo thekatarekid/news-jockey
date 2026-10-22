@@ -1,0 +1,560 @@
+[
+  {
+    "id": "npr",
+    "name": "NPR",
+    "category": "Politics/National",
+    "website": "https://www.npr.org",
+    "feed_url": "https://feeds.npr.org/1003/rss.xml",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "the-new-york-times",
+    "name": "The New York Times",
+    "category": "Politics/National",
+    "website": "https://www.nytimes.com",
+    "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "cbs-news",
+    "name": "CBS News",
+    "category": "Politics/National",
+    "website": "https://www.cbsnews.com",
+    "feed_url": "https://www.cbsnews.com/latest/rss/politics",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "abc-news",
+    "name": "ABC News",
+    "category": "Politics/National",
+    "website": "https://abcnews.go.com",
+    "feed_url": "https://abcnews.go.com/abcnews/politicsheadlines",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "pbs-newshour",
+    "name": "PBS NewsHour",
+    "category": "Politics/National",
+    "website": "https://www.pbs.org/newshour",
+    "feed_url": "https://www.pbs.org/newshour/feeds/rss/politics",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "the-hill",
+    "name": "The Hill",
+    "category": "Politics/National",
+    "website": "https://thehill.com",
+    "feed_url": "https://thehill.com/feed/",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "propublica",
+    "name": "ProPublica",
+    "category": "Politics/National",
+    "website": "https://www.propublica.org",
+    "feed_url": "https://www.propublica.org/feeds/propublica/main",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "the-washington-times",
+    "name": "The Washington Times",
+    "category": "Politics/National",
+    "website": "https://www.washingtontimes.com",
+    "feed_url": "https://www.washingtontimes.com/rss/headlines/news/politics/",
+    "starter": false,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "the-guardian-us",
+    "name": "The Guardian US",
+    "category": "Politics/National",
+    "website": "https://www.theguardian.com/us-news",
+    "feed_url": "https://www.theguardian.com/us-news/rss",
+    "starter": false,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "fox-news",
+    "name": "Fox News",
+    "category": "Politics/National",
+    "website": "https://www.foxnews.com",
+    "feed_url": "https://moxie.foxnews.com/google-publisher/politics.xml",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "nbc-news",
+    "name": "NBC News",
+    "category": "Politics/National",
+    "website": "https://www.nbcnews.com",
+    "feed_url": "https://feeds.nbcnews.com/nbcnews/public/politics",
+    "starter": true,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "the-washington-post",
+    "name": "The Washington Post",
+    "category": "Politics/National",
+    "website": "https://www.washingtonpost.com",
+    "feed_url": "https://feeds.washingtonpost.com/rss/politics",
+    "starter": false,
+    "description": "US national affairs and politics"
+  },
+  {
+    "id": "variety",
+    "name": "Variety",
+    "category": "Entertainment",
+    "website": "https://variety.com",
+    "feed_url": "https://variety.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "the-hollywood-reporter",
+    "name": "The Hollywood Reporter",
+    "category": "Entertainment",
+    "website": "https://www.hollywoodreporter.com",
+    "feed_url": "https://www.hollywoodreporter.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "deadline",
+    "name": "Deadline",
+    "category": "Entertainment",
+    "website": "https://deadline.com",
+    "feed_url": "https://deadline.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "billboard",
+    "name": "Billboard",
+    "category": "Entertainment",
+    "website": "https://www.billboard.com",
+    "feed_url": "https://www.billboard.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "rolling-stone",
+    "name": "Rolling Stone",
+    "category": "Entertainment",
+    "website": "https://www.rollingstone.com",
+    "feed_url": "https://www.rollingstone.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "e-news",
+    "name": "E! News",
+    "category": "Entertainment",
+    "website": "https://www.eonline.com",
+    "feed_url": "https://www.eonline.com/syndication/feeds/rssfeeds/topstories.xml",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "consequence",
+    "name": "Consequence",
+    "category": "Entertainment",
+    "website": "https://consequence.net",
+    "feed_url": "https://consequence.net/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "thewrap",
+    "name": "TheWrap",
+    "category": "Entertainment",
+    "website": "https://www.thewrap.com",
+    "feed_url": "https://www.thewrap.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "tmz",
+    "name": "TMZ",
+    "category": "Entertainment",
+    "website": "https://www.tmz.com",
+    "feed_url": "https://www.tmz.com/rss.xml",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "entertainment-tonight",
+    "name": "Entertainment Tonight",
+    "category": "Entertainment",
+    "website": "https://www.etonline.com",
+    "feed_url": "https://www.etonline.com/news/rss",
+    "starter": false,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "collider",
+    "name": "Collider",
+    "category": "Entertainment",
+    "website": "https://collider.com",
+    "feed_url": "https://collider.com/feed/",
+    "starter": true,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "pitchfork",
+    "name": "Pitchfork",
+    "category": "Entertainment",
+    "website": "https://pitchfork.com",
+    "feed_url": "https://pitchfork.com/feed/feed-news/rss",
+    "starter": false,
+    "description": "US entertainment, film, television or music"
+  },
+  {
+    "id": "espn",
+    "name": "ESPN",
+    "category": "Sports",
+    "website": "https://www.espn.com",
+    "feed_url": "https://www.espn.com/espn/rss/news",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "cbs-sports",
+    "name": "CBS Sports",
+    "category": "Sports",
+    "website": "https://www.cbssports.com",
+    "feed_url": "https://www.cbssports.com/rss/headlines/",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "yahoo-sports",
+    "name": "Yahoo Sports",
+    "category": "Sports",
+    "website": "https://sports.yahoo.com",
+    "feed_url": "https://sports.yahoo.com/rss/",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "sports-illustrated",
+    "name": "Sports Illustrated",
+    "category": "Sports",
+    "website": "https://www.si.com",
+    "feed_url": "https://www.si.com/feed",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "sporting-news",
+    "name": "Sporting News",
+    "category": "Sports",
+    "website": "https://www.sportingnews.com/us",
+    "feed_url": "https://www.sportingnews.com/us/rss",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "sb-nation",
+    "name": "SB Nation",
+    "category": "Sports",
+    "website": "https://www.sbnation.com",
+    "feed_url": "https://www.sbnation.com/rss/index.xml",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "awful-announcing",
+    "name": "Awful Announcing",
+    "category": "Sports",
+    "website": "https://awfulannouncing.com",
+    "feed_url": "https://awfulannouncing.com/feed",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "sportico",
+    "name": "Sportico",
+    "category": "Sports",
+    "website": "https://www.sportico.com",
+    "feed_url": "https://www.sportico.com/feed/",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "techcrunch",
+    "name": "TechCrunch",
+    "category": "Tech",
+    "website": "https://techcrunch.com",
+    "feed_url": "https://techcrunch.com/feed/",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "the-verge",
+    "name": "The Verge",
+    "category": "Tech",
+    "website": "https://www.theverge.com",
+    "feed_url": "https://www.theverge.com/rss/index.xml",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "ars-technica",
+    "name": "Ars Technica",
+    "category": "Tech",
+    "website": "https://arstechnica.com",
+    "feed_url": "https://feeds.arstechnica.com/arstechnica/index",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "wired",
+    "name": "Wired",
+    "category": "Tech",
+    "website": "https://www.wired.com",
+    "feed_url": "https://www.wired.com/feed/rss",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "engadget",
+    "name": "Engadget",
+    "category": "Tech",
+    "website": "https://www.engadget.com",
+    "feed_url": "https://www.engadget.com/rss.xml",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "cnet",
+    "name": "CNET",
+    "category": "Tech",
+    "website": "https://www.cnet.com",
+    "feed_url": "https://www.cnet.com/rss/news/",
+    "starter": false,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "zdnet",
+    "name": "ZDNET",
+    "category": "Tech",
+    "website": "https://www.zdnet.com",
+    "feed_url": "https://www.zdnet.com/news/rss.xml",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "mit-technology-review",
+    "name": "MIT Technology Review",
+    "category": "Tech",
+    "website": "https://www.technologyreview.com",
+    "feed_url": "https://www.technologyreview.com/feed/",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "gizmodo",
+    "name": "Gizmodo",
+    "category": "Tech",
+    "website": "https://gizmodo.com",
+    "feed_url": "https://gizmodo.com/feed",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "9to5mac",
+    "name": "9to5Mac",
+    "category": "Tech",
+    "website": "https://9to5mac.com",
+    "feed_url": "https://9to5mac.com/feed/",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "the-register",
+    "name": "The Register",
+    "category": "Tech",
+    "website": "https://www.theregister.com",
+    "feed_url": "https://www.theregister.com/headlines.atom",
+    "starter": false,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "mashable",
+    "name": "Mashable",
+    "category": "Tech",
+    "website": "https://mashable.com",
+    "feed_url": "https://mashable.com/feeds/rss/all",
+    "starter": true,
+    "description": "Technology coverage relevant to US readers"
+  },
+  {
+    "id": "cnbc",
+    "name": "CNBC",
+    "category": "Business",
+    "website": "https://www.cnbc.com",
+    "feed_url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "marketwatch",
+    "name": "MarketWatch",
+    "category": "Business",
+    "website": "https://www.marketwatch.com",
+    "feed_url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "the-wall-street-journal",
+    "name": "The Wall Street Journal",
+    "category": "Business",
+    "website": "https://www.wsj.com",
+    "feed_url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "fortune",
+    "name": "Fortune",
+    "category": "Business",
+    "website": "https://fortune.com",
+    "feed_url": "https://fortune.com/feed/",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "forbes",
+    "name": "Forbes",
+    "category": "Business",
+    "website": "https://www.forbes.com",
+    "feed_url": "https://www.forbes.com/business/feed/",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "business-insider",
+    "name": "Business Insider",
+    "category": "Business",
+    "website": "https://www.businessinsider.com",
+    "feed_url": "https://www.businessinsider.com/rss",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "fast-company",
+    "name": "Fast Company",
+    "category": "Business",
+    "website": "https://www.fastcompany.com",
+    "feed_url": "https://www.fastcompany.com/latest/rss",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "inc",
+    "name": "Inc.",
+    "category": "Business",
+    "website": "https://www.inc.com",
+    "feed_url": "https://www.inc.com/rss/",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "quartz",
+    "name": "Quartz",
+    "category": "Business",
+    "website": "https://qz.com",
+    "feed_url": "https://qz.com/rss",
+    "starter": false,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "kiplinger",
+    "name": "Kiplinger",
+    "category": "Business",
+    "website": "https://www.kiplinger.com",
+    "feed_url": "https://www.kiplinger.com/feeds/all",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "bloomberg",
+    "name": "Bloomberg",
+    "category": "Business",
+    "website": "https://www.bloomberg.com",
+    "feed_url": "https://feeds.bloomberg.com/markets/news.rss",
+    "starter": true,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "nyt-business",
+    "name": "NYT Business",
+    "category": "Business",
+    "website": "https://www.nytimes.com/section/business",
+    "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "starter": false,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "yahoo-finance",
+    "name": "Yahoo Finance",
+    "category": "Business",
+    "website": "https://finance.yahoo.com",
+    "feed_url": "https://finance.yahoo.com/news/rssindex",
+    "starter": false,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "seeking-alpha",
+    "name": "Seeking Alpha",
+    "category": "Business",
+    "website": "https://seekingalpha.com",
+    "feed_url": "https://seekingalpha.com/market_currents.xml",
+    "starter": false,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "entrepreneur",
+    "name": "Entrepreneur",
+    "category": "Business",
+    "website": "https://www.entrepreneur.com",
+    "feed_url": "https://www.entrepreneur.com/latest.rss",
+    "starter": false,
+    "description": "US business, markets or personal finance"
+  },
+  {
+    "id": "nbc-sports",
+    "name": "NBC Sports",
+    "category": "Sports",
+    "website": "https://www.nbcsports.com",
+    "feed_url": "https://www.nbcsports.com/index.rss",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "sportsnaut",
+    "name": "Sportsnaut",
+    "category": "Sports",
+    "website": "https://sportsnaut.com",
+    "feed_url": "https://sportsnaut.com/feed/",
+    "starter": true,
+    "description": "US sports coverage; may also include international events"
+  },
+  {
+    "id": "politico",
+    "name": "Politico",
+    "category": "Politics/National",
+    "website": "https://www.politico.com",
+    "feed_url": "https://rss.politico.com/politics-news.xml",
+    "starter": true,
+    "description": "US politics and government"
+  }
+]

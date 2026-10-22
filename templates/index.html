@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="newsjockey-token" content="{{ token }}"><title>News Jockey — local collector</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script><script src="/static/analysis.js" defer></script></head>
+<body>
+<header><h1>News Jockey</h1><span>Local news collector</span><button id="collect">Collect now</button></header>
+<div id="notice" role="status" aria-live="polite"></div>
+<nav id="phase-tabs" aria-label="Processing phases"><button data-phase="2" aria-pressed="true">1–2 · Raw data &amp; extraction</button><button data-phase="3" aria-pressed="false">3 · Categories &amp; entities</button><button data-phase="4" aria-pressed="false">4 · News stories</button><button data-phase="5" aria-pressed="false">5 · Topics</button><button data-phase="6" aria-pressed="false">6 · Factual outputs</button></nav>
+<div id="raw-workspace">
+<section id="processing-status" aria-labelledby="processing-title">
+<div class="processing-head"><h2 id="processing-title">Article extraction</h2><span id="processing-workers" role="status" aria-live="polite"></span></div>
+<p id="extraction-schedule">Automatic extraction: articles published in the current calendar month. Previous months and Chrome rendering run only when requested.</p>
+<div class="extraction-controls">
+<label>Extraction month<select id="extraction-month"><option value="recent">Current month</option><option value="undated">Unknown publication date</option></select></label>
+<button id="extract-month">Extract selected month</button>
+<button id="extract-old">Extract all previous months</button>
+<button id="chrome-recent">Chrome fallback: Selected month</button>
+<button id="chrome-older">Chrome fallback: All previous months</button>
+<label>Portal timezone<input id="portal-timezone" value="Asia/Calcutta"></label><button id="save-timezone">Save timezone</button>
+</div>
+<p class="muted">These jobs cover all publishers, independent of table filters. Chrome starts a separate invisible browser with a temporary profile. Current-month ordinary extraction runs automatically. Unknown dates are separate and never assumed to be October.</p>
+<div class="table-scroll"><table id="extraction-jobs"><caption>Requested extraction jobs</caption><thead><tr><th>Job</th><th>Status</th><th>Total</th><th>Finished / saved</th><th>Reused results</th><th>Remaining</th><th>In flight</th><th>Failures</th><th>Controls</th></tr></thead><tbody id="extraction-jobs-body"></tbody></table></div>
+<p id="extraction-job-policy" class="muted">Historical backfill runs once per article version. Repeated clicks add new articles, not another extraction pass. Use an article’s retry control for an intentional recheck.</p>
+<details open><summary>Saved body availability by publisher</summary>
+<label>Publication dates<select id="coverage-group"><option value="recent">Current month</option><option value="older">All previous months</option><option value="undated">Unknown publication date</option><option value="all">All dates</option></select></label>
+<p id="coverage-summary"></p><p class="muted">Body quality and latest fetch outcome are separate. Full means structural checks passed; no measured 90% guarantee. Video-only items and undated inventory are counted separately.</p>
+<div class="table-scroll"><table><thead><tr><th>Publisher</th><th>Total</th><th>Full</th><th>Partial</th><th>Unknown</th><th>No body</th><th>Pending</th><th>Blocked / failed / restricted</th><th>Video/audio only</th><th>Undated</th><th>Feed / page / Chrome</th></tr></thead><tbody id="coverage-body"></tbody></table></div>
+<p id="host-cooldowns" class="muted"></p>
+</details>
+<details><summary>Extraction attempts during the last 24 hours</summary><table><thead><tr><th>Transport</th><th>Attempts</th><th>Average seconds</th><th>Full results</th><th>Blocked / failed / restricted</th></tr></thead><tbody id="attempts-body"></tbody></table><p class="muted">Recorded since this upgrade. Repeat attempts count separately from saved article availability.</p></details>
+<details><summary>Latest extraction job states (all dates)</summary>
+<table id="processing-table">
+<caption>All publishers, independent of article filters. Counts refresh every 15 seconds.</caption>
+<thead><tr><th scope="col">Status / metric</th><th scope="col" class="count">Count</th><th scope="col">Meaning</th></tr></thead>
+<tbody id="processing-body"><tr><td colspan="3">Loading extraction stats…</td></tr></tbody>
+<tfoot>
+<tr><th scope="row">Total articles</th><td id="processing-total" class="count">—</td><td>Distinct articles in the news table; the statuses above add up to this total.</td></tr>
+<tr><th scope="row">Saved versions</th><td id="processing-versions" class="count">—</td><td>Stored text/metadata snapshots, including each item's first copy. These are not all publisher edits or extra articles.</td></tr>
+</tfoot>
+</table>
+</details>
+</section>
+<nav aria-label="Portal views"><button id="articles-tab" aria-pressed="true">Articles</button><button id="sources-tab" aria-pressed="false">Sources</button><button id="recipes-tab" aria-pressed="false">Extraction recipes</button></nav>
+<main>
+<section id="articles-view">
+<form id="filters" class="controls">
+<label>Search<input id="search" type="search" placeholder="Title, content or author"></label>
+<label>Source category<select id="category"><option value="">All source categories</option>{% for c in categories %}<option>{{c}}</option>{% endfor %}</select></label>
+<label>Publisher<select id="source"><option value="">All publishers</option></select></label>
+<label>Content type<select id="content_type"><option value="">All content types</option>{% for c in content_types %}<option>{{c}}</option>{% endfor %}</select></label>
+<label>Media format<select id="media_format"><option value="">All media</option><option>text</option><option>video</option><option>audio</option><option>image_gallery</option></select></label>
+<label>Extraction<select id="extraction_status"><option value="">All statuses</option>{% for c in extraction_statuses %}<option>{{c}}</option>{% endfor %}</select></label>
+<label>Published dates<select id="date_group"><option value="recent">Current month</option><option value="older">All previous months</option><option value="undated">Unknown publication date</option><option value="all">All dates</option></select></label>
+<label>Saved body quality<select id="body_quality"><option value="">Any</option><option>full</option><option>partial</option><option>unknown</option><option>none</option></select></label>
+<label>Text available<select id="kind"><option value="">Any</option><option>Full text</option><option>Partial page text</option><option>Feed content</option><option>Feed summary</option><option>Headline only</option></select></label>
+<label>First seen<select id="since"><option value="">Any time</option><option value="24">Last 24 hours</option><option value="168">Last 7 days</option><option value="720">Last 30 days</option></select></label>
+<label>Published from (UTC)<input id="from" type="date"></label><label>Published through (UTC)<input id="to" type="date"></label>
+<label>Sort<select id="sort"><option value="published">Published</option><option value="seen">First seen</option><option value="changed">Content changed</option><option value="source">Source</option><option value="title">Title</option></select></label>
+<label>Order<select id="direction"><option value="desc">Descending</option><option value="asc">Ascending</option></select></label>
+<button type="submit">Apply</button><button type="button" id="reset">Reset</button>
+</form>
+<div class="table-info"><strong id="article-count">Loading articles…</strong><span>Times shown in the configured portal timezone. Open a title to read collected text.</span></div>
+<div class="table-scroll"><table><thead><tr><th>Title / collected text</th><th>Publisher</th><th>Source category</th><th>Content type / media</th><th>Published</th><th>First seen</th><th>Author / tags</th><th>Text / extraction</th></tr></thead><tbody id="articles-body"></tbody></table></div>
+<div class="pagination"><button id="prev">Previous</button><span id="page-info"></span><button id="next">Next</button><label>Rows<select id="size"><option>50</option><option>100</option><option>25</option></select></label></div>
+</section>
+<section id="sources-view" hidden>
+<div class="source-add">
+<h2>Add publishers and discovery channels</h2><p>Search the publisher catalog, or paste website and feed URLs in bulk. Enabled publishers are automatically scanned for additional sections and sitemaps.</p>
+<label>Search publishers<input id="catalog-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="catalog-results" placeholder="e.g. Washington Post, Pitchfork, CNET"></label>
+<div id="catalog-results" role="listbox" aria-label="Publisher suggestions" hidden></div>
+<details id="bulk"><summary>Add website or RSS/Atom URLs in bulk</summary>
+<form id="discover-form"><label>URLs (one per line, up to 50)<textarea id="bulk-urls" rows="5" placeholder="https://example.com&#10;https://another-publisher.com/feed/"></textarea></label><label>Category for imported sources<select id="import-category">{% for c in categories %}<option>{{c}}</option>{% endfor %}</select></label><button type="submit" id="discover-button">Discover feeds</button></form>
+<div id="discovery-results"></div><button id="add-discovered" hidden>Add selected feeds</button>
+</details>
+</div>
+<div class="table-info"><strong>Publisher coverage</strong><div><button id="expand-coverage">Scan all publishers</button> <button id="retry-gaps">Retry extraction gaps</button></div></div>
+<p class="muted">Coverage reflects discovered channels, not a guarantee of every published item. Chrome is requested through the two extraction buttons above; publisher settings cannot enable automatic browser extraction.</p>
+<div class="table-scroll"><table><thead><tr><th>Publisher</th><th>Source category</th><th>Channels</th><th>Coverage / gaps</th><th>Saved full bodies</th><th>Recipe diagnosis</th><th>Action</th></tr></thead><tbody id="publishers-body"></tbody></table></div>
+<div class="table-info"><strong id="source-count"></strong><span>Five-minute default; publisher feed hints and error backoff can extend it. Collection runs while this app is running.</span></div>
+<label>Show channels for<select id="channel-publisher"><option value="">All publishers</option></select></label>
+<div class="table-scroll"><table><thead><tr><th>Discovery channel</th><th>Source category</th><th>Enabled</th><th>Interval (min)</th><th>Status</th><th>Last successful check</th><th>Next check</th><th>Newest published item</th><th>Articles</th><th>Action</th></tr></thead><tbody id="sources-body"></tbody></table></div>
+</section>
+<section id="recipes-view" hidden>
+<h2>Publisher extraction recipes</h2><p>Recipes are local CSS/XPath rules. Seed recipes are candidates; validation status is shown. Use diagnostics for occasional Luna/Terra recipe repair. This screen makes no model or paid-search calls.</p>
+<div class="table-scroll"><table><thead><tr><th>Recipe</th><th>Hosts / template</th><th>Version</th><th>Validation</th><th>Action</th></tr></thead><tbody id="recipes-body"></tbody></table></div>
+<h3>Templates needing review</h3><div class="table-scroll"><table><thead><tr><th>Publisher</th><th>Template</th><th>Partial/missing results</th><th>Last seen</th><th>Diagnostic samples</th></tr></thead><tbody id="recipe-failures-body"></tbody></table></div>
+<details><summary>Create or repair a recipe</summary><form id="recipe-form" class="recipe-form">
+<label>Recipe JSON<textarea id="recipe-json" rows="12" placeholder='{"id":"example-article","hosts":["example.com"],"include":[".article-body"],"remove":["aside"],"template":"article"}'></textarea></label>
+<label>Development article IDs (comma separated)<input id="recipe-development"></label><label>Different validation article IDs (at least two)<input id="recipe-validation"></label>
+<div><button type="button" id="preview-recipe">Preview validation</button> <button type="submit">Validate and activate</button></div><pre id="recipe-results"></pre>
+</form></details>
+</section>
+</main>
+</div>
+{% include "analysis.html" %}
+<dialog id="article-dialog"><div class="dialog-head"><h2 id="detail-title"></h2><button id="close-dialog" aria-label="Close article">Close</button></div><a id="original" target="_blank" rel="noopener noreferrer">Read at publisher</a> <button id="retry-article">Extract again</button><dl id="detail-metadata"></dl>
+<div class="controls"><label>Correct content type<select id="detail-content-type">{% for c in content_types %}<option>{{c}}</option>{% endfor %}</select></label><button id="save-content-type">Save label</button></div>
+<h3 id="detail-kind"></h3><p id="detail-content"></p><iframe id="detail-rich" title="Collected article body" sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox" hidden></iframe>
+<details><summary>Original feed text</summary><p id="detail-feed-content"></p></details>
+<section id="detail-media"></section><section id="detail-images"></section>
+<details><summary>Discovery channels and saved versions</summary><p class="muted">Versions preserve text and metadata as first collected and when they change through feed updates, extraction, or manual label corrections. A new version does not necessarily mean the publisher edited the article.</p><div id="detail-history"></div></details>
+<p class="muted">Complete means the extractor found a structurally complete public body; it is not publisher-verified. Missing text and video transcripts remain explicit gaps.</p></dialog>
+</body></html>

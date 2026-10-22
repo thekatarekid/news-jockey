@@ -1,0 +1,43 @@
+<section id="analysis-workspace" hidden>
+<div class="processing-head"><h2 id="phase-title">Categories &amp; entities</h2><span id="phase-counts"></span></div>
+<p id="phase-description"></p>
+<section id="corpus-controls">
+<form id="corpus-run" class="controls"><label>Publication month<select id="corpus-month"></select></label><button>Process whole month into stories</button><button type="button" id="refresh-corpus">Refresh progress</button></form>
+<p>All stored articles in the selected month are included. Titles and leads are sufficient to attempt matching; extraction continues separately. Reruns reuse unchanged metadata and embeddings. Articles collected after a run starts join the next run.</p>
+<p><strong>Local processing:</strong> GLiNER2 categories and entities → EmbeddingGemma 2 title and lead vectors → whole-month candidate search → same-event and cluster consistency checks. No subscription model is called by this job.</p>
+<p id="corpus-counts" role="status"></p>
+<div class="table-scroll"><table><thead><tr><th>Month / input snapshot</th><th>Status / step</th><th>Metadata &amp; vectors</th><th>Stories / singletons</th><th>Controls</th></tr></thead><tbody id="corpus-jobs"></tbody></table></div>
+</section>
+<p id="topics-deferred" hidden>Topic processing is deferred until story grouping has been reviewed across the full October corpus. Experimental topic seeds have been cleared.</p>
+<form id="analysis-run" class="controls" hidden>
+<label>Publication dates<select id="analysis-scope"><option value="recent">Current month</option><option value="older">All previous months</option><option value="undated">Unknown publication date</option><option value="all">All dates</option></select></label>
+<label>Decisions<select id="analysis-engine"><option value="luna">Luna · ChatGPT subscription</option><option value="local">Local rules · no model calls</option><option value="terra">Terra · ChatGPT subscription</option></select></label>
+<label>Batch size<input id="analysis-limit" type="number" min="1" max="500" value="25"></label>
+<button id="run-phase">Run this phase</button>
+<button id="refresh-analysis" type="button">Refresh</button>
+</form>
+
+<details hidden><summary>Legacy bounded experiments</summary>
+<p id="adapter-status">Check adapters to see availability.</p><button id="check-adapters">Check adapters</button> <button id="start-embeddings">Start local embeddings</button>
+<form id="analysis-settings" class="controls"><label>Retrieval<select id="analysis-embedding"><option value="embeddinggemma-2">EmbeddingGemma 2 · local</option><option value="none">Lexical only</option></select></label><label>Dimensions<select id="analysis-dimensions"><option>512</option><option>768</option><option>256</option><option>128</option></select></label><button>Save processing configuration</button></form>
+<p class="muted">Model inputs include saved article text and metadata. Subscription inference runs through the signed-in Codex CLI with tools disabled. Model, prompt version, latency and token usage are logged; unavailable memory measurements remain unknown. Configuration changes create a new processing version.</p>
+<div class="table-scroll"><table><thead><tr><th>Operation</th><th>Provider / model</th><th>Calls</th><th>Mean seconds</th><th>Input / output tokens</th><th>Additional API cost</th></tr></thead><tbody id="analysis-calls"></tbody></table></div>
+<div id="analysis-evaluations"></div></details>
+<details hidden><summary>Legacy processing jobs</summary><p class="muted">Pause and cancel take effect after the current item finishes. Failed subscription calls pause the job for inspection.</p>
+<div class="table-scroll"><table><thead><tr><th>Phase / engine / dates</th><th>Status</th><th>Processed / total</th><th>Failed</th><th>Updated</th><th>Controls</th></tr></thead><tbody id="analysis-jobs"></tbody></table></div></details>
+<section id="metadata-panel">
+<form id="metadata-filter" class="controls"><label>Search<input id="metadata-search" type="search" placeholder="Title or publisher"></label><label>News category<select id="metadata-category"><option value="">All categories</option></select></label><label>Input status<select id="metadata-status"><option value="">All</option><option>ready</option><option>limited</option><option>held</option><option>stale</option></select></label><button>Filter</button></form>
+<p class="muted">Source category stays unchanged. News categories are multi-label and describe the content. Ready describes input availability, not verified classification accuracy. Limited and held items need review.</p>
+<div class="table-scroll"><table><thead><tr><th>Article / publisher</th><th>News categories</th><th>Content type</th><th>Entities / locations</th><th>Event time</th><th>Input / method</th><th>Review</th></tr></thead><tbody id="metadata-body"></tbody></table></div>
+<div class="pager"><button id="metadata-prev">Previous</button><span id="metadata-page"></span><button id="metadata-next">Next</button></div>
+</section>
+<section id="stories-panel" hidden><form id="stories-filter" class="controls"><label>Search articles in stories<input id="stories-search" type="search"></label><label>Publication month<select id="stories-month"><option value="all">All processed months</option></select></label><label>Group size<select id="stories-size"><option value="2">Multiple articles</option><option value="0">All stories</option><option value="1">Single articles only</option></select></label><button>Search</button></form>
+<p id="story-review-count"></p><p class="muted">Headlines are representative publisher headlines until Phase 6. Matching uses title/lead similarity, event words, entities, dates and a stable representative. Clusters are provisional and can be corrected below. Reporting groups are estimates, not verified independent sources.</p>
+<div class="table-scroll"><table><thead><tr><th>ID</th><th>News story</th><th>Articles</th><th>Publishers</th><th>Updated</th><th>Review</th></tr></thead><tbody id="stories-body"></tbody></table></div><div class="pager"><button id="stories-prev">Previous</button><span id="stories-page"></span><button id="stories-next">Next</button></div></section>
+<section id="topics-panel" hidden><form id="topics-filter" class="controls"><label>Search topics<input id="topics-search" type="search"></label><button>Search</button></form>
+<details><summary>Create a specific topic</summary><form id="topic-create" class="controls"><label>Title · max 6 words<input id="topic-new-title" required></label><label>Scope / description<textarea id="topic-new-description" required></textarea></label><button>Create topic</button></form></details>
+<p class="muted">Topics can span years and contain many events. Titles and scope are editable seeds; factual summaries and competing views are Phase 6. Manual inclusions, exclusions and pinned topics persist.</p>
+<div class="table-scroll"><table><thead><tr><th>ID</th><th>Topic / scope</th><th>Stories</th><th>Pinned</th><th>Updated</th><th>Review</th></tr></thead><tbody id="topics-body"></tbody></table></div></section>
+</section>
+<section id="outputs-workspace" hidden><h2>Phase 6 · Factual outputs &amp; views</h2><p>Not implemented yet. This screen will hold evidence-linked factual headlines, summaries, competing views and cover images after story and topic grouping have been evaluated.</p></section>
+<dialog id="analysis-dialog"><div class="dialog-head"><h2 id="analysis-detail-title"></h2><button id="analysis-close">Close</button></div><p id="analysis-dialog-notice" role="status" aria-live="polite"></p><div id="analysis-detail"></div></dialog>

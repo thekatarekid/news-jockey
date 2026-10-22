@@ -1,0 +1,1 @@
+"""News Jockey local collector."""
